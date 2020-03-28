@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>001</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            width: 70%;
+            margin: 0 auto;
+        }
+        h2{
+            font-size: 30px;
+            color: rgb(207, 205, 180);
+            text-shadow: 1.5px 2.5px 3px rgba(0, 0, 0, 0.75);
+        }
+        h3{
+            font-size: 20px;
+            color: rgb(234, 159, 62);
+        }
+        p{
+            font-size: 1em;
+        }
+        .lightbrown {
+            color: rgb(175, 150, 113);
+        }
+        .bej{
+            color: rgb(207, 205, 180);
+        }
+        .orange {
+            color: rgb(234, 159, 62);
+        }
+        .line{
+            padding: 15px;
+        }
+        .line p{
+            line-height: 0.5;
+        }
+        /*header style*/
+        header{
+            min-height: 500px;
+            background: url("Images/headerBG.png") no-repeat ;
+            background-size: cover;
+        }
+        header .row2 img{
+            width: 100%;
+        }
+        .row1{
+            min-height: 100px;
+        }
+        .row2{
+            min-height: 400px;
+        }
+        /*aside style*/
+        aside{
+            max-height: 930px;
+            background-color: #201b0e;
+            border-top: 1px solid #958251;
+            box-shadow: 0 0 5px #957e41;
+            height: auto;
+        }
+        aside .row1{
+            height: 60px;
+        }
+        aside .row2{
+            min-height: 740px;
+        }
+        aside .row2 img{
+            width: 100%;
+        }
+        /*main style*/
+        main{
+            background-color: #3a2e16;
+            border-top: 1px solid #958251;
+            box-shadow: 0 0 5px #957e41;
+            min-height: 720px;
+        }
+        /*footer style*/
+        footer{
+            height: 100px;
+            background-color: #201b0e;
+            border-top: 1px solid #958251;
+            box-shadow: 0 0 5px #957e41;
+            margin-bottom: 50px;
+        }
+        /*style lg size*/
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+             p{
+                font-size: 0.9em;
+            }
+            aside{
+                max-height: 1600px;
+            }
+        }
+        /*style md size*/
+        @media screen and (min-width: 768px) and (max-width: 992px){
+             header{
+                min-height: 550px;
+            }
+            h4{
+                text-align: center;
+            }
+            p{
+                font-size: 0.8em;
+            }
+            .navbar .navbar-toggler{
+                background-color: bisque;
+            }
+            .navbar a{
+                color: rgba(101, 76, 23, 0.87);
+                background-color: bisque;
+                width: 120px;
+            }
+            .col-md-8{
+                margin: 20px auto 0;
+            }
+            aside{
+                /*1200px < height < 1400px;  max-width don't work*/
+                min-height: 1400px;
+            }
+            aside .row2 {
+               height: 120px;
+            }
+        }
+        /*style sm */
+        @media screen and (min-width: 576px) and (max-width: 768px){
+            header .row2 img{
+                width: 80%;
+            }
+            .navbar .navbar-toggler{
+                background-color: bisque;
+            }
+            .navbar a{
+                color: rgba(101, 76, 23, 0.87);
+                background-color: bisque;
+                width: 120px;
+                padding-left: 0;
+            }
+            aside{
+                max-height: 2800px;
+            }
+            aside .row2 img{
+                width: 80%;
+                margin: 0 10%;
+            }
+        }
+        /*style xs */
+        @media screen and (max-width: 576px){
+             h2{
+                font-size: 25px;
+            }
+            h3{
+                font-size: 1.2em;
+            }
+            p{
+                font-size: 0.8em;
+            }
+            header .row2 img{
+                width: 70%;
+                margin: 0 15%;
+            }
+            .navbar .navbar-toggler{
+                background-color: bisque;
+            }
+            .navbar a{
+                color: rgba(101, 76, 23, 0.87);
+                background-color: bisque;
+                width: 120px;
+                padding-left: 0;
+            }
+            aside{
+                max-height: 2600px;
+            }
+        }
+        </style>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="row row1 pt-4">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-8">
+                <a href="#" class="text-decoration-none"><h2>STEVEN SNELL</h2></a>
+                <p class="lightbrown font-italic">web & graphic design portfolio</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link text-warning font-weight-bold active pl-3" href="#">work <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link text-warning font-weight-bold active pl-3" href="#">services</a>
+                            <a class="nav-item nav-link text-warning font-weight-bold active pl-3" href="#">contact me</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                <h3>ABOUT ME</h3>
+                <p class="bej">Your welcome text will message or “about me” text will go here. I am text will go available” text will go here. for freelance projects. Lorem ipsum dolor sit am Lorem ips. Your welcome message or “about me” text will go here. Lorem ips. Your welcome message or “about me” text will go here. Lorem ips.</p>
+                <p class="bej">Your welcome text will message or “about me” text will go here. I am text will go available” text will go here. for freelance projects. Lorem ipsum dolor sit am Lorem ips. Your welcome message or “about me” text will go here. Lorem ips. Your welcome message or “about me” text will go here. Lorem ips.</p>
+                <p class="bej pb-3">Your welcome text will message or welcome message or “about me” text will go here. Lorem ips. Your welcome message or “about me” text will go here. Lorem ips.</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                <h3>LOOKING FOR A DESIGNER?  </h3>
+                <p class="bej">Your welcome text will message or “about me” text will go here. I am text will go available” text will go here. for freelance projects. Lorem ipsum dolor sit am Lorem ips. Your welcome message or “about me” text will go here. Lorem ips. Your welcome message or “about me” text will go here. Lorem ips.</p>
+                <div class="row" style="width: 100%">
+                    <div class="col-xl-5 col-lg-6">
+                        <img src="Images/2.png" alt="" class="my-4">
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <p class="bej">Your welcome text will message or welcome message or “about me” text will go here. Lorem ips. Your welcome message or “about me” text will go here. Lorem ips.</p>
+                        <p class="pb-3"><span class="bej">email:</span><span class="orange"> wymail@myboxmain.com</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="row row1">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="mt-4 pt-3">MY WORK</h3>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 " src="Images/screenshots copy.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1" src="Images/screenshots copy 23.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1" src="Images/screenshots copy 3.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 5.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 4.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 6.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 23.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 9.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                <img class="img mt-3 border border-warning p-1 text-center" src="Images/screenshots copy 8.png" alt="">
+                <div class="line">
+                    <p class="lightbrown">Project Title</p>
+                    <p class="bej">Project description and date</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="row pt-4">
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12">
+                <h3><img class="mr-4" src="Images/palette%20icon.png" alt="">  SERVICES</h3>
+                <h4 class="lightbrown pt-4">Web Design </h4>
+                <p class="bej">Lorem ipsum dolor sit amet, consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,  consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+                <h4 class="lightbrown">Web Design </h4>
+                <p class="bej">Lorem ipsum dolor sit amet, consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,  consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+                <h4 class="lightbrown">Web Design </h4>
+                <p class="bej">Lorem ipsum dolor sit amet, consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,  consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12">
+                <h3><img class="mr-4" src="Images/twitter%20icon.png" alt="">  TWEETS</h3>
+                <p class="bej pt-4">Lorem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+                <p class="bej">Lorem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+                <p class="bej">Lorem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+                <p class="bej">Lorem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor sit amet,consectetu em ipsum dolor sit amet con sectetuadipiscing e</p>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12">
+                <h3><img class="mr-4" src="Images/mail%20icon.png" alt=""> CONTACT</h3>
+                <p class="bej pt-4">If you’re interested in getting a quote for a  projec interested in getting a quote for a  project or if your <span class="orange">email me</span> orem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor orem ipsum dolor consectetur em ipsum dolor sit amet, consectetu em ipsum dolor </p>
+                <p><span class="bej">email:</span><span class="orange"> wymail@myboxmain.com</span></p>
+                <p class="lightbrown  mt-5"><img class="mr-4" src="Images/small%20twitter%20icon.png" alt="">Twitter</p>
+                <p class="lightbrown"><img class="mr-4" src="Images/small%20delicious%20icon.png" alt="">Delicious</p>
+                <p class="lightbrown"><img class="mr-4" src="Images/small%20flickr%20icon.png" alt="">Flickr</p>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <a href="#"  class="orange text-decoration-none"><h4>Return to top</h4></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="bej py-4">Copyright Steven Snell, 2009</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
